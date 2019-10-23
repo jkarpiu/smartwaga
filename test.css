@@ -1,0 +1,50 @@
+
+
+#menu > ul{
+    display: none;
+    position: fixed;
+    background: black;
+    list-style-type: none;
+    top: 0px;
+    left: 0px;
+    min-width: 150px;
+    min-height: 100%;
+    padding: 0px;
+}
+
+#menu > ul > li{
+    text-align: center;
+    min-height: 20px;
+    font-size: 20px;
+    margin: 8px;
+    border-bottom: 1px solid whitesmoke;
+}
+#menu > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+}
+#menu:hover > ul {
+    display: block;
+}
+
+.fa-bars {
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.fa-close {
+    text-align: right;
+    float: right;
+    margin-bottom: 25px;
+}
+
+
+@media screen and (min-width: 561px) {
+    ul {
+        min-width: 250px;
+    }
+    body {
+        background-color: violet;
+    }
+}
