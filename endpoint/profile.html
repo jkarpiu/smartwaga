@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email https://www.googleapis.com/auth/fitness.body.read https://www.googleapis.com/auth/fitness.body.write https://www.googleapis.com/auth/fitness.activity.write https://www.googleapis.com/auth/fitness.activity.read https://www.googleapis.com/auth/fitness.location.read https://www.googleapis.com/auth/fitness.location.write https://www.googleapis.com/auth/fitness.nutrition.read https://www.googleapis.com/auth/fitness.nutrition.write">
+    <meta name="google-signin-client_id" content="67891551062-t47bdhdjfe898me45ev25ufn69mj9ekt.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log(profile);
+
+        var auth = googleUser.getAuthResponse();
+        console.log(auth.access_token);
+        console.log(auth);
+        sendData(auth.access_token)
+      }
+      var sendData = function(token) {
+        $.post('profile.php', {
+        data: token
+        }, function(response) {
+        console.log(response);
+      })};
+    </script>
+  </body>
+</html>
+
