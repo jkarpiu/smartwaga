@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animacja</title>
+
+    <style>
+      div {
+        text-align:center;
+        padding:15px 0;
+        border:6px solid #FDD700;
+
+        animation-name:szerokosc;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+
+        -webkit-animation-name:szerokosc;
+        -webkit-animation-duration:3s;
+        -webkit-animation-iteration-count:infinite;
+      }
+      @keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:300px; }
+      }
+
+      @-webkit-keyframes szerokosc
+      {
+        0% { width:150px; }
+        100% { width:350px; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div>Siusiak</div>
+
+  </body>
+</html>
